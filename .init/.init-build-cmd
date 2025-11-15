@@ -1,0 +1,4 @@
+{
+    "command": "flutter build apk --release --target-platform android-x64",
+    "working_directory": "/home/kavia/workspace/code-generation/figma-to-mobile-app-conversion-40791-40807/mobile_frontend"
+}
