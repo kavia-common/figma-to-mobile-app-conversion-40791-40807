@@ -8,6 +8,7 @@ plugins {
 android {
     namespace = "com.example.mobile_frontend"
     compileSdk = flutter.compileSdkVersion
+    // Explicitly pin the Android NDK version to avoid CI/build image mismatches.
     ndkVersion = "27.0.12077973"
 
     compileOptions {
