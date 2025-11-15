@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mobile_frontend/main.dart';
+import 'package:mobile_frontend/app.dart';
 
 void main() {
-  testWidgets('App generation message displayed', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
+  testWidgets('App builds and shows a MaterialApp with routing', (WidgetTester tester) async {
+    await tester.pumpWidget(const App());
 
-    expect(find.text('mobile_frontend App is being generated...'), findsOneWidget);
-    expect(find.byType(CircularProgressIndicator), findsOneWidget);
-  });
-
-  testWidgets('App bar has correct title', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
-
-    expect(find.text('mobile_frontend'), findsOneWidget);
+    // Verify MaterialApp exists and initial route content is present (stub screen).
+    expect(find.byType(MaterialApp), findsOneWidget);
+    // Our initial route is a stub screen titled 'Home 16:454'
+    expect(find.text('Home 16:454'), findsOneWidget);
   });
 }
